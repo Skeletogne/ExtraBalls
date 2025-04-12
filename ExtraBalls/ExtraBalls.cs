@@ -39,8 +39,8 @@ namespace ExtraBalls
             Log.Init(Logger);
             ApplyILHook();
         }
-        public static Dictionary<ChargeTrioBomb, List<Transform>> cachedBellInformation = new Dictionary<ChargeTrioBomb, List<Transform>>();
-        public static List<Transform> GenerateTransformList(int count, ChargeTrioBomb baseState)
+        private static Dictionary<ChargeTrioBomb, List<Transform>> cachedBellInformation = new Dictionary<ChargeTrioBomb, List<Transform>>();
+        private static List<Transform> GenerateTransformList(int count, ChargeTrioBomb baseState)
         {
             if (count == 0)
             {
@@ -86,7 +86,7 @@ namespace ExtraBalls
             }
             return list;
         }
-        public static void ApplyILHook()
+        private static void ApplyILHook()
         {
             IL.EntityStates.Bell.BellWeapon.ChargeTrioBomb.FixedUpdate += (il) =>
             {
