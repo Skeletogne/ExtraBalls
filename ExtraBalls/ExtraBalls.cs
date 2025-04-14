@@ -149,13 +149,13 @@ namespace ExtraBalls
             //bomb count set here
             bombCount = 5;
             //time between skill state start and first bomb getting fired (all of these are dependent on attack speed!)
-            base.prepDuration *= 2f;
+            base.prepDuration *= 1f;
             //time between individual bomb preps
-            base.timeBetweenPreps *= 2f;
+            base.timeBetweenPreps *= 1f;
             //time between first bomb getting fired and returning to main state (skill is considered finished)
-            base.barrageDuration *= 2f;
+            base.barrageDuration *= 1f;
             //time between individual bomb fires
-            base.timeBetweenBarrages *= 2f;
+            base.timeBetweenBarrages *= 1f;
             GenerateTransforms();
         }
         public override void FixedUpdate()
